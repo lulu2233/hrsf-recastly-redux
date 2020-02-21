@@ -4,16 +4,14 @@ import changeVideo from './../actions/currentVideo.js';
 
 let mapStateToProps = (state) =>{
   return {
-    VideoList: state.videos
+    videos: state.videos
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
+  console.log("what's dispatch" + dispatch);
   return {
-    handleVideoListEntryTitleClick: (video) => dispatch({
-      type: 'CHANGE_LIST',
-      VideoList: videos,
-    })
+    handleVideoListEntryTitleClick: (video) => dispatch(changeVideo(video))
   };
 };
 

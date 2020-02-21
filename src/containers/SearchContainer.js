@@ -2,6 +2,11 @@ import { connect } from 'react-redux';
 import Search from './../components/Search.js';
 import handleSearchChange from '../actions/search.js';
 
+let mapStateToProps = (state) => {
+  return {
+    videos: state.videos};
+};
+
 let mapDispatchToProps = (dispatch) => {
   return {
     handleSearchInputChange: (q) =>
